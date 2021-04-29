@@ -1,0 +1,153 @@
+.cart-transition {
+  background-color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: -39px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #000;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    width: 40%;
+    height: 18px;
+  }
+
+  &__inner {
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    padding: 20px 15px;
+    .description {
+      display: none;
+    }
+    .price {
+      font-size: 16px;
+    }
+    .counter {
+      margin: auto 10px;
+      span {
+        font-size: 14px;
+        padding: 7px;
+        color: #000;
+      }
+    }
+    .cart__empty {
+      font-size: 25px;
+      margin: 11px;
+      width: 344px;
+    }
+    .all-sum {
+      margin-top: 10px;
+      h2 {
+        font-size: 20px;
+      }
+    }
+    i {
+      margin: auto 20px auto 15px;
+      color: #fff;
+      font-size: 25px;
+    }
+    img {
+      margin-right: 8px;
+      width: 56px;
+      height: 56px;
+    }
+    .cart-items {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      max-height: 270px;
+      overflow-y: scroll;
+      &-inner {
+        width: 85px;
+        text-align: start;
+        overflow-wrap: break-word;
+        h2 {
+          font-size: 16px;
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 2px;
+        &-track {
+          background: #000;
+        }
+        &-thumb {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+.cart-transitions {
+  &-enter {
+    opacity: 0;
+    &-active {
+      opacity: 1;
+      transition: all 0.6s linear;
+    }
+  }
+  &-exit {
+    opacity: 1;
+    &-active {
+      opacity: 0;
+      transition: all 0.1s linear;
+    }
+  }
+}
+
+.cart {
+  position: relative;
+}
+
+.item-button {
+  position: relative;
+  &__counter {
+    color: red;
+    position: absolute;
+    text-align: center;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    animation: counterAnimation 0.7s linear;
+  }
+}
+
+@keyframes counterAnimation {
+  from {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
