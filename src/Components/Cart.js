@@ -24,7 +24,7 @@ export default function Cart() {
         <div style={{ position: "static" }} className="container">
           <div className="header__inner">
             <h1>Hi there</h1>
-            <NavLink to="/">
+            <NavLink to={process.env.PUBLIC_URL + "/"}>
               <button>
                 <span>Return</span>
               </button>

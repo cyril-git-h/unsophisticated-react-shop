@@ -9,8 +9,8 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
-      <Route path="/" exact component={Main} />
-      <Route path="/cart" exact component={Cart} />
+      <Route path={process.env.PUBLIC_URL + "/"} exact component={Main} />
+      <Route path={process.env.PUBLIC_URL + "/cart"} exact component={Cart} />
     </Router>
   );
 }
