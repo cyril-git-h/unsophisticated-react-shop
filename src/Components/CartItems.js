@@ -32,7 +32,7 @@ export default function CartItems() {
     .concat()
     .sort(compare)
     .map((element) => (
-      <li key={getItem(element.item, "id")}>
+      <li key={element.id}>
         <img width="70px" height="70px" src={getItem(element.item, "image")} alt="place" />
         <div className="cart-items-inner">
           <h2>{getItem(element.item, "title")}</h2>
