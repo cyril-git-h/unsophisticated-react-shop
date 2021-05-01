@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/unsophisticated-react-shop/static/css/main.79d50fc0.chunk.css",
-    "main.js": "/unsophisticated-react-shop/static/js/main.3fecb3ed.chunk.js",
-    "main.js.map": "/unsophisticated-react-shop/static/js/main.3fecb3ed.chunk.js.map",
+    "main.css": "/unsophisticated-react-shop/static/css/main.4ddcbc81.chunk.css",
+    "main.js": "/unsophisticated-react-shop/static/js/main.a710f7fc.chunk.js",
+    "main.js.map": "/unsophisticated-react-shop/static/js/main.a710f7fc.chunk.js.map",
     "runtime-main.js": "/unsophisticated-react-shop/static/js/runtime-main.1b71432f.js",
     "runtime-main.js.map": "/unsophisticated-react-shop/static/js/runtime-main.1b71432f.js.map",
     "static/js/2.2124a6b9.chunk.js": "/unsophisticated-react-shop/static/js/2.2124a6b9.chunk.js",
     "static/js/2.2124a6b9.chunk.js.map": "/unsophisticated-react-shop/static/js/2.2124a6b9.chunk.js.map",
     "index.html": "/unsophisticated-react-shop/index.html",
-    "static/css/main.79d50fc0.chunk.css.map": "/unsophisticated-react-shop/static/css/main.79d50fc0.chunk.css.map",
+    "static/css/main.4ddcbc81.chunk.css.map": "/unsophisticated-react-shop/static/css/main.4ddcbc81.chunk.css.map",
     "static/js/2.2124a6b9.chunk.js.LICENSE.txt": "/unsophisticated-react-shop/static/js/2.2124a6b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1b71432f.js",
     "static/js/2.2124a6b9.chunk.js",
-    "static/css/main.79d50fc0.chunk.css",
-    "static/js/main.3fecb3ed.chunk.js"
+    "static/css/main.4ddcbc81.chunk.css",
+    "static/js/main.a710f7fc.chunk.js"
   ]
 }
