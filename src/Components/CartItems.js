@@ -9,10 +9,10 @@ export default function CartItems() {
   let returnedArray = useSelector((state) => state.items);
   const dispatch = useDispatch();
 
-  function getItem(elem, name) {
-    for (let object of items) {
-      if (object["id"] == elem) {
-        return object[name];
+  function getItem(id, field) {
+    for (let item of items) {
+      if (item["id"] == id) {
+        return item[field];
       }
     }
   }
@@ -21,41 +21,41 @@ export default function CartItems() {
     return a.id - b.id;
   }
 
-  function deleteFromCart(elem, num) {
+  function deleteFromCart(id, num) {
     if (num > 1) {
-      return dispatch(decrement(elem));
+      return dispatch(decrement(id));
     }
-    return dispatch(deleteInstance(elem));
+    return dispatch(deleteInstance(id));
   }
 
   let cartInstance = returnedArray
     .concat()
     .sort(compare)
-    .map((element) => (
-      <li key={element.id}>
-        <img width="70px" height="70px" src={getItem(element.item, "image")} alt="place" />
+    .map((item) => (
+      <li key={item.id}>
+        <img width="70px" height="70px" src={getItem(item.id, "image")} alt="place" />
         <div className="cart-items-inner">
-          <h2>{getItem(element.item, "title")}</h2>
-          <p className="description">{getItem(element.item, "description")}</p>
+          <h2>{getItem(item.id, "title")}</h2>
+          <p className="description">{getItem(item.id, "description")}</p>
         </div>
         <div className="counter">
           <span
-            onClick={() => deleteFromCart(element.item, element.number)}
+            onClick={() => deleteFromCart(item.id, item.number)}
             className="change-by-one"
           >
             −
           </span>
-          <span>{element.number}</span>
+          <span>{item.number}</span>
           <span
-            onClick={() => dispatch(increment(element.item))}
+            onClick={() => dispatch(increment(item.id))}
             className="change-by-one"
           >
             +
           </span>
         </div>
-        <span className="price">{getItem(element.item, "price")}$</span>
+        <span className="price">{getItem(item.id, "price")}$</span>
         <i
-          onClick={() => dispatch(deleteInstance(element.item))}
+          onClick={() => dispatch(deleteInstance(item.id))}
           className="fas fa-trash"
         ></i>
       </li>

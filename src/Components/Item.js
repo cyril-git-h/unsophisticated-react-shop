@@ -11,7 +11,7 @@ export function Item({ id, image, title, description, price }) {
 
   const dispatch = useDispatch();
   function cartUpdate(id) {
-    if (selected.filter((object) => object.item == id).length == 0) {
+    if (selected.filter((item) => item.id == id).length == 0) {
       dispatch(addToCart(id));
     } else {
       dispatch(increment(id));

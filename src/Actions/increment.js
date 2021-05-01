@@ -1,4 +1,4 @@
-export default (payload) => ({
+export default (id) => ({
   type: "INCREMENT",
-  payload: payload,
+  payload: id,
 });

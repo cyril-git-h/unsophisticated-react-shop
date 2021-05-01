@@ -7,12 +7,12 @@ import items from "./ItemsList";
 import Footer from "./Footer";
 
 export default function Cart() {
-  const returnedArray = useSelector((state) => state.items);
+  const storeItems = useSelector((state) => state.items);
 
-  let sumprice = returnedArray.reduce(function (acc, curr) {
-    for (let object of items) {
-      if (object["id"] == curr.item) {
-        curr = object["price"] * curr.number;
+  let sumprice = storeItems.reduce(function (acc, curr) {
+    for (let item of items) {
+      if (item["id"] == curr.id) {
+        curr = item["price"] * curr.number;
       }
     }
     return acc + curr;

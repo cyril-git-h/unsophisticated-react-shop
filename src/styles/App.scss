@@ -52,8 +52,13 @@ nav {
 
 .slider {
     overflow: hidden;
-    width: 1035px;
+    max-width: 1035px;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
+    img {
+        width: inherit;
+    }
     &__inner {
         display: flex;
     }
@@ -88,14 +93,14 @@ nav {
     }
     h1 {
         font-size: 24px;
+        margin-left: 13px;
     }
 }
 
 .item {
     line-height: 20px;
-    width: 240px;
-    margin-right: 25px;
-    margin-bottom: 20px;
+    width: 252px;
+    margin: 0 13px 20px;
     h2 {
         font-size: 20px;
         margin: 20px 0 5px;
@@ -248,3 +253,4 @@ button {
 }
 
 @import './module/transitions';
+@import './module/mobile';

@@ -1,4 +1,4 @@
-export default (payload) => ({
+export default (id) => ({
   type: "DELETE_INSTANCE",
-  payload: payload,
+  payload: id,
 });

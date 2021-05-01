@@ -3,19 +3,19 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import itemsList from "./ItemsList";
+import items from "./ItemsList";
 import CartItems from "./CartItems";
 import { smoothScrollFunction } from "../vanilla";
 
 export default function Header() {
   useEffect(smoothScrollFunction, []);
 
-  const items = useSelector((state) => state.items);
+  const storeItems = useSelector((state) => state.items);
 
-  let sumprice = items.reduce(function (acc, curr) {
-    for (let object of itemsList) {
-      if (object["id"] == curr.item) {
-        curr = object["price"] * curr.number;
+  let sumprice = storeItems.reduce(function (acc, curr) {
+    for (let item of items) {
+      if (item["id"] == curr.id) {
+        curr = item["price"] * curr.number;
       }
     }
     return acc + curr;
@@ -46,7 +46,7 @@ export default function Header() {
             <NavLink to="/cart" className="cart-link">
               <button>
                 <span>Shopping cart</span>
-                <span>{items.reduce((acc, curr) => acc + curr.number, 0)}</span>
+                <span>{storeItems.reduce((acc, curr) => acc + curr.number, 0)}</span>
               </button>
             </NavLink>
             <CSSTransition
