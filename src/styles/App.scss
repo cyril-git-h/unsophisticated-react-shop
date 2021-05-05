@@ -3,6 +3,11 @@
 $main-font: "Bebas Neue", Arial, Arial, Helvetica, sans-serif;
 $main-color: #65ba99;
 
+html,
+body {
+    overscroll-behavior-y: contain;
+}
+
 .container {
     width: 1000px;
     margin: 0 auto;
@@ -57,24 +62,35 @@ $main-color: #65ba99;
     display: flex;
     &__icon {
         margin-right: 10px;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: #fff;
+        height: fit-content;
+        &:hover {
+            background-color: #000;
+        }
         &:last-child {
             margin-right: 0;
         }
     }
-    &__icon img {
-        border-radius: 50%;
+    &__icon svg {
         transition: all 0.1s linear;
-        &:hover {
-            background-color: $main-color;
-        }
+        display: block;
+    }
+    &__icon:hover path {
+        fill: $main-color;
     }
 }
 
 //test
 .banner {
-    transition: height .1s linear;
+    transition: height 1s linear;
+    overflow: hidden;
     height: calc(100vh - 101px);
     height: calc(var(--vh, 1vh) * 100 - 101px);
+}
+.hidden {
+    height: 0 !important;
 }
 
 .slider {
