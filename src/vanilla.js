@@ -1,44 +1,7 @@
 export const sliderFunction = () => {
-  const rightbtn = document.querySelector("#rightbtn");
-  const leftbtn = document.querySelector("#leftbtn");
-  const carouselImages = document.querySelectorAll(".slider__inner img");
-  const size = carouselImages[0].clientWidth;
-  const slider = document.querySelector(".slider__inner");
-
-  let counter = 1;
-
-  slider.style.transform = `translateX(${-size * counter}px)`;
-
-  function rightbtnclicked() {
-    if (counter >= carouselImages.length - 1) return;
-    slider.style.transition = "transform 0.4s ease-in-out";
-    counter++;
-    slider.style.transform = `translateX(${-size * counter}px)`;
-  }
-
-  function leftbtnclicked() {
-    if (counter <= 0) return;
-    slider.style.transition = "transform 0.4s ease-in-out";
-    counter--;
-    slider.style.transform = `translateX(${-size * counter}px)`;
-  }
-
-  rightbtn.addEventListener("click", rightbtnclicked);
-  leftbtn.addEventListener("click", leftbtnclicked);
-
-  function moveAgain() {
-    if (carouselImages[counter].id === "lastClone") {
-      slider.style.transition = "none";
-      counter = carouselImages.length - 2;
-      slider.style.transform = `translateX(${-size * counter}px)`;
-    }
-    if (carouselImages[counter].id === "firstClone") {
-      slider.style.transition = "none";
-      counter = carouselImages.length - counter;
-      slider.style.transform = `translateX(${-size * counter}px)`;
-    }
-  }
-  slider.addEventListener("transitionend", moveAgain);
+  window.addEventListener('scroll', () => 
+  {let scroll = window.pageYOffset;
+  })
 };
 
 export const smoothScrollFunction = () => {
@@ -53,7 +16,11 @@ export const smoothScrollFunction = () => {
     let offsetTop = document.querySelector(targetId).offsetTop;
 
     if (!document.querySelector(".banner").classList.contains("hidden")) {
-      document.querySelector(".banner").classList.add("hidden");
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+      ) {
+        document.querySelector(".banner").classList.add("hidden");
+      }
       return setTimeout(() => {
         let offsetTop = document.querySelector(targetId).offsetTop;
         window.scroll({
@@ -84,7 +51,6 @@ export const preventScroll = () => {
       top: 0,
     });
   });
-
 
   document.addEventListener("touchstart", (event) => {
     touchStart = event.changedTouches[0].clientY;
