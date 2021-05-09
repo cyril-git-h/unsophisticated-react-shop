@@ -32,7 +32,7 @@ export function Item({ id, image, title, description, price }) {
               +1
             </span>
           ))}
-          <button onClick={() => cartUpdate(id)}>Pick it</button>
+          <button onClick={() => cartUpdate(id)}>Buy</button>
         </div>
       </div>
     </div>

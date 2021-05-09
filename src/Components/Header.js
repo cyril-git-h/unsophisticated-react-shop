@@ -125,16 +125,6 @@ export default function Header() {
                     {storeItems.reduce((acc, curr) => acc + curr.number, 0)}
                   </span>
                 </NavLink>
-                <CSSTransition
-                  nodeRef={nodeRef}
-                  in={inProp}
-                  timeout={{
-                    enter: 300,
-                    exit: 0,
-                  }}
-                  classNames="cart-transitions"
-                  unmountOnExit
-                >
                   <div ref={nodeRef} className="cart-transition">
                     <div className="cart-transition__inner">
                       <CartItems />
@@ -148,7 +138,6 @@ export default function Header() {
                       )}
                     </div>
                   </div>
-                </CSSTransition>
               </div>
             </div>
             <div className="header__right">

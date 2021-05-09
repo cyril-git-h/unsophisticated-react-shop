@@ -13,6 +13,10 @@ body {
     margin: 0 auto;
 }
 
+.page {
+    background-color: $main-color;
+}
+
 .page-enter {
     opacity: 0;
     transform: translateX(-100%);
@@ -134,7 +138,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    padding-top: 750px; /* (img-height / img-width * container-width) */
+    padding-top: 100vh; /* (img-height / img-width * container-width) */
     /* (556 / 556 * 1000) */
 }
 
@@ -167,17 +171,14 @@ body {
     background-color: $main-color;
 }
 
-main {
-    background-color: $main-color;
-}
-
 .section {
     margin: 30px 0;
     font-weight: 500;
     &__inner {
         display: flex;
         flex-wrap: wrap;
-        margin: 30px 0;
+        max-width: 960px;
+        margin: 30px auto;
     }
     h1 {
         font-size: 48px;
@@ -185,24 +186,32 @@ main {
         font-family: "Bebas Neue", Arial, Arial, Helvetica, sans-serif;
         margin-top: 100px;
         color: #ffffff;
-        text-align: center;
         letter-spacing: 25px;
     }
 }
 
 .item {
+    position: relative;
     padding: 20px 20px;
     background: #fff;
     outline: 1px solid;
-    box-shadow: 12px 12px 2px 1px RGB(0 0 0 / 20%);
     line-height: 20px;
-    width: 252px;
+    width: 240px;
     h2 {
         font-size: 20px;
         margin: 20px 0 5px;
     }
     img {
         width: 200px;
+    }
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 12px 12px 2px 1px RGB(0 0 0 / 20%);
     }
 }
 
@@ -246,7 +255,7 @@ button {
 
 .footer {
     background-color: #444b55;
-    margin-top: auto;
+    margin-top: 50px;
     &__inner {
         display: flex;
         padding: 30px 0;
@@ -278,21 +287,26 @@ button {
 .cart-items {
     margin: 45px 0;
     padding: 15px;
-    border-top: 1px solid #bdbdbd;
-    border-bottom: 1px solid #bdbdbd;
+    background-color: #fff;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
     li {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         justify-items: center;
         margin: 25px 0;
+        img {
+            margin: auto 10px;
+        }
+        .price {
+            margin: auto 10px;
+        }
     }
-    img {
-        margin-right: 20px;
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-}
-
-.cart-items-inner {
-    margin: auto 0;
 }
 
 .cart__empty {
@@ -301,8 +315,23 @@ button {
     margin: 111px;
 }
 
+.cart-empty-icon {
+    display: flex;
+    flex-direction: column;
+    margin: 70px;
+    svg {
+        margin: auto;
+    }
+    span {
+        color: #fff;
+        font-size: 30px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
 .counter {
-    margin: auto 30px auto 75px;
+    margin: auto 0 auto 5px;
     background-color: #f3f3f7;
     padding: 10px;
     border-radius: 15px;
@@ -323,7 +352,7 @@ button {
 }
 
 .fa-trash {
-    margin: auto 55px;
+    margin: auto 10px;
     font-size: 30px;
     color: #000;
     cursor: pointer;

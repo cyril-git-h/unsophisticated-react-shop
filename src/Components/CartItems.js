@@ -33,7 +33,12 @@ export default function CartItems() {
     .sort(compare)
     .map((item) => (
       <li key={item.id}>
-        <img width="70px" height="70px" src={getItem(item.id, "image")} alt="place" />
+        <img
+          width="70px"
+          height="70px"
+          src={getItem(item.id, "image")}
+          alt="place"
+        />
         <div className="cart-items-inner">
           <h2>{getItem(item.id, "title")}</h2>
           <p className="description">{getItem(item.id, "description")}</p>
@@ -61,12 +66,26 @@ export default function CartItems() {
       </li>
     ));
   return (
-    <ul className="cart-items">
+    <>
       {cartInstance.length !== 0 ? (
-        cartInstance
+        <ul className="cart-items">{cartInstance}</ul>
       ) : (
-        <h1 className="cart__empty">is empty</h1>
+        <div className="cart-empty-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z"></path>
+            <path
+              d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+              fill="#fff"
+            ></path>
+          </svg>
+          <span>cart is empty</span>
+        </div>
       )}
-    </ul>
+    </>
   );
 }
