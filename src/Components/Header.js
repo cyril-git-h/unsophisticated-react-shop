@@ -33,7 +33,7 @@ SwiperCore.use([EffectFade, Navigation, Pagination, Parallax, Autoplay]);
 export default function Header() {
   useEffect(smoothScrollFunction, []);
   useEffect(preventScroll, []);
-  useEffect(sliderFunction, [])
+  useEffect(sliderFunction, []);
 
   const storeItems = useSelector((state) => state.items);
 
@@ -58,7 +58,7 @@ export default function Header() {
           effect={"fade"}
           loop
           speed={2000}
-          autoplay={{delay: 1500, disableOnInteraction: false}}
+          autoplay={{ delay: 1500, disableOnInteraction: false }}
           className="mySwiper"
         >
           <SwiperSlide>
