@@ -172,8 +172,8 @@ body {
 }
 
 .section {
-    margin: 30px 0;
     font-weight: 500;
+    margin-bottom: 50px;
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -255,7 +255,6 @@ button {
 
 .footer {
     background-color: #444b55;
-    margin-top: 50px;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -389,7 +388,7 @@ button {
 .all-sum-outer {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 //Loader
