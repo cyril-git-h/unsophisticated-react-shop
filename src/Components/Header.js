@@ -10,10 +10,9 @@ import {
   sliderFunction,
   preventScroll,
 } from "../vanilla";
-import darkgreen from "../images/darkgreen.png";
-import brightgreen from "../images/brightgreen.png";
-import black from "../images/black.png";
-import aqua from "../images/aqua.png";
+import slide1 from "../images/slide1.jpg";
+import slide2 from "../images/slide2.jpg";
+import slide3 from "../images/slide3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   EffectFade,
@@ -66,7 +65,7 @@ export default function Header() {
             <div
               className="slide"
               style={{
-                backgroundImage: `url('https://swiperjs.com/demos/images/nature-1.jpg')`,
+                backgroundImage: `url(${slide1})`,
               }}
             ></div>
           </SwiperSlide>
@@ -74,7 +73,7 @@ export default function Header() {
             <div
               className="slide"
               style={{
-                backgroundImage: `url('https://swiperjs.com/demos/images/nature-2.jpg')`,
+                backgroundImage: `url(${slide2})`,
               }}
             ></div>
           </SwiperSlide>
@@ -82,15 +81,7 @@ export default function Header() {
             <div
               className="slide"
               style={{
-                backgroundImage: `url('https://swiperjs.com/demos/images/nature-3.jpg')`,
-              }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="slide"
-              style={{
-                backgroundImage: `url('https://swiperjs.com/demos/images/nature-4.jpg')`,
+                backgroundImage: `url(${slide3})`,
               }}
             ></div>
           </SwiperSlide>
@@ -125,6 +116,16 @@ export default function Header() {
                     {storeItems.reduce((acc, curr) => acc + curr.number, 0)}
                   </span>
                 </NavLink>
+                <CSSTransition
+                  nodeRef={nodeRef}
+                  in={inProp}
+                  timeout={{
+                    enter: 300,
+                    exit: 0,
+                  }}
+                  classNames="cart-transitions"
+                  unmountOnExit
+                >
                   <div ref={nodeRef} className="cart-transition">
                     <div className="cart-transition__inner">
                       <CartItems />
@@ -138,6 +139,7 @@ export default function Header() {
                       )}
                     </div>
                   </div>
+                </CSSTransition>
               </div>
             </div>
             <div className="header__right">
