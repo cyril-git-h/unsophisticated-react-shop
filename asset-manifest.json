@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/unsophisticated-react-shop/static/css/main.f9bdfa2c.chunk.css",
-    "main.js": "/unsophisticated-react-shop/static/js/main.4438306f.chunk.js",
-    "main.js.map": "/unsophisticated-react-shop/static/js/main.4438306f.chunk.js.map",
+    "main.js": "/unsophisticated-react-shop/static/js/main.f15f7fb1.chunk.js",
+    "main.js.map": "/unsophisticated-react-shop/static/js/main.f15f7fb1.chunk.js.map",
     "runtime-main.js": "/unsophisticated-react-shop/static/js/runtime-main.1b71432f.js",
     "runtime-main.js.map": "/unsophisticated-react-shop/static/js/runtime-main.1b71432f.js.map",
     "static/css/2.259a925a.chunk.css": "/unsophisticated-react-shop/static/css/2.259a925a.chunk.css",
@@ -11,13 +11,16 @@
     "index.html": "/unsophisticated-react-shop/index.html",
     "static/css/2.259a925a.chunk.css.map": "/unsophisticated-react-shop/static/css/2.259a925a.chunk.css.map",
     "static/css/main.f9bdfa2c.chunk.css.map": "/unsophisticated-react-shop/static/css/main.f9bdfa2c.chunk.css.map",
-    "static/js/2.01be83a9.chunk.js.LICENSE.txt": "/unsophisticated-react-shop/static/js/2.01be83a9.chunk.js.LICENSE.txt"
+    "static/js/2.01be83a9.chunk.js.LICENSE.txt": "/unsophisticated-react-shop/static/js/2.01be83a9.chunk.js.LICENSE.txt",
+    "static/media/slide1.9a3cde37.jpg": "/unsophisticated-react-shop/static/media/slide1.9a3cde37.jpg",
+    "static/media/slide2.be795b4c.jpg": "/unsophisticated-react-shop/static/media/slide2.be795b4c.jpg",
+    "static/media/slide3.946c4148.jpg": "/unsophisticated-react-shop/static/media/slide3.946c4148.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b71432f.js",
     "static/css/2.259a925a.chunk.css",
     "static/js/2.01be83a9.chunk.js",
     "static/css/main.f9bdfa2c.chunk.css",
-    "static/js/main.4438306f.chunk.js"
+    "static/js/main.f15f7fb1.chunk.js"
   ]
 }
