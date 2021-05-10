@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/unsophisticated-react-shop/static/css/main.2ce49e8b.chunk.css",
+    "main.css": "/unsophisticated-react-shop/static/css/main.1496e4bd.chunk.css",
     "main.js": "/unsophisticated-react-shop/static/js/main.1104654a.chunk.js",
     "main.js.map": "/unsophisticated-react-shop/static/js/main.1104654a.chunk.js.map",
     "runtime-main.js": "/unsophisticated-react-shop/static/js/runtime-main.1b71432f.js",
@@ -10,7 +10,7 @@
     "static/js/2.01be83a9.chunk.js.map": "/unsophisticated-react-shop/static/js/2.01be83a9.chunk.js.map",
     "index.html": "/unsophisticated-react-shop/index.html",
     "static/css/2.259a925a.chunk.css.map": "/unsophisticated-react-shop/static/css/2.259a925a.chunk.css.map",
-    "static/css/main.2ce49e8b.chunk.css.map": "/unsophisticated-react-shop/static/css/main.2ce49e8b.chunk.css.map",
+    "static/css/main.1496e4bd.chunk.css.map": "/unsophisticated-react-shop/static/css/main.1496e4bd.chunk.css.map",
     "static/js/2.01be83a9.chunk.js.LICENSE.txt": "/unsophisticated-react-shop/static/js/2.01be83a9.chunk.js.LICENSE.txt",
     "static/media/slide1.9a3cde37.jpg": "/unsophisticated-react-shop/static/media/slide1.9a3cde37.jpg",
     "static/media/slide2.be795b4c.jpg": "/unsophisticated-react-shop/static/media/slide2.be795b4c.jpg",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.1b71432f.js",
     "static/css/2.259a925a.chunk.css",
     "static/js/2.01be83a9.chunk.js",
-    "static/css/main.2ce49e8b.chunk.css",
+    "static/css/main.1496e4bd.chunk.css",
     "static/js/main.1104654a.chunk.js"
   ]
 }
